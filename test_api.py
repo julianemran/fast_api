@@ -3,7 +3,7 @@ import requests
 
 
 def getUserResponse(id):
-    URL = "http://localhost:8000/user/{0}".format(id)
+    URL = "http://localhost/user/{0}".format(id)
     res = requests.get(url=URL).json()
     return res
 
@@ -18,7 +18,7 @@ def test_getting_users():
 
 
 def addUserResponse(id, name, age):
-    URL = "http://localhost:8000/users/{0}".format(id)
+    URL = "http://localhost/users/{0}".format(id)
     newUser = {"name": name, "age": age}
     res = requests.post(URL, json=newUser)
     return res.json()
@@ -40,7 +40,7 @@ def test_adding_users():
 
 
 def deleteUserResponse(id, pas):
-    URL = "http://localhost:8000/users/{0}".format(id)
+    URL = "http://localhost/users/{0}".format(id)
     password = {"password": pas}
     res = requests.delete(url=URL, json=password)
     return res.json()

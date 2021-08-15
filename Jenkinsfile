@@ -8,7 +8,7 @@ pipeline {
         }
         stage('Build') {
             steps {
-                sh 'npm install -r requirements.txt'
+                sh 'pip install -r requirements.txt'
                 echo 'Build completed'
             }
         }
