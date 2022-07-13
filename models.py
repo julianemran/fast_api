@@ -6,3 +6,4 @@ class User(BaseModel):
 
 class Password(BaseModel):
     password: str
+        
